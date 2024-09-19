@@ -18,7 +18,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: 'https://jetquestsubhajit.netlify.app/', // Adjust this according to your frontend's domain
+  origin: 'https://jetquestsubhajit.netlify.app', // Adjust this according to your frontend's domain
   credentials: true // Allow cookies to be sent across origins
 }));
 app.use(express.json()); // Parse incoming requests with JSON payloads
