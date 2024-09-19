@@ -1,5 +1,5 @@
-const Booking = require('../models/BookingModel');
-const User = require('../models/UserModel'); // Assuming you have a User model
+const Booking = require('../Models/BookingModel');
+const User = require('../Models/UserModel'); // Assuming you have a User model
 
 // Create a new booking
 exports.createBooking = async (req, res) => {

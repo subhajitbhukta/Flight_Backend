@@ -1,4 +1,4 @@
-const User = require('../models/UserModel');
+const User = require('../Models/UserModel');
 
 exports.getUserBookings = async (req, res) => {
   const userId = req.params.id;

@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true, // Each user must have a unique email
+    unique: true,
   },
   password: {
     type: String,
@@ -16,17 +16,17 @@ const userSchema = new mongoose.Schema({
   },
   isAdmin: {
     type: Boolean,
-    default: false, // Default to regular user unless explicitly set as admin
+    default: false, // Default to false, meaning regular user
   },
   resetPasswordToken: {
     type: String,
-    default: null, // Field to store OTP (One Time Password) or token
+    default: null, // This will store the OTP
   },
   resetPasswordExpires: {
     type: Date,
-    default: null, // Field to store the expiration time for OTP
+    default: null, // This will store the expiration time for the OTP
   },
-}, { timestamps: true }); // Automatically adds createdAt and updatedAt fields
+}, { timestamps: true }); // Optional: adds createdAt and updatedAt timestamps
 
 const User = mongoose.model('User', userSchema);
 
